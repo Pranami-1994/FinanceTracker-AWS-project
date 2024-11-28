@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('https://images.pexels.com/photos/3943723/pexels-photo-3943723.jpeg?auto=compress&cs=tinysrgb&w=600') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Overlay Effect */
+        .overlay {
+            background: rgba(0, 0, 0, 0.6); /* Transparent black overlay */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Header and Description Container */
+        .content {
+            margin-top: 100px; /* Adjusted margin to move content lower */
+            text-align: center;
+        }
+
+        /* Header Styling */
+        h1 {
+            margin: 20px 0;
+            font-size: 3em;
+            color: #f1c40f;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Application Description */
+        p {
+            margin: 20px auto;
+            max-width: 800px;
+            font-size: 1.2em;
+        }
+
+        /* Links Container */
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        /* Buttons Styling */
+        .top-right {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        a:hover {
+            background-color: #2980b9;
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            p {
+                font-size: 1em;
+                padding: 15px;
+            }
+
+            a {
+                font-size: 1em;
+                padding: 10px 15px;
+            }
+
+            .top-right {
+                flex-direction: column;
+                top: 10px;
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="top-right">
+        <a href="{{ url_for('register') }}">Get Started</a>
+        <a href="{{ url_for('login') }}">Login</a>
+    </div>
+    <div class="content">
+        <h1>Personal Finance Tracker</h1>
+        <p>
+            Welcome to the Personal Finance Tracker, a comprehensive and user-friendly solution designed to simplify your financial management. 
+            This application empowers you to take complete control of your income, expenses, and savings by offering tools to track your spending, 
+            set and monitor budgets, and analyze your financial habits. Whether you're saving for a specific goal, managing household expenses, 
+            or simply striving to improve your financial literacy, this platform is tailored to meet your needs. With features like categorized tracking, 
+            detailed monthly summaries, and savings projections, it provides you with valuable insights to make informed financial decisions. 
+            The Personal Finance Tracker ensures that managing your money is no longer a daunting task but a streamlined process that helps you stay 
+            on top of your finances and plan effectively for a secure and prosperous future.
+        </p>
+    </div>
+</body>
+</html>
